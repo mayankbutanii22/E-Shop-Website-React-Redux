@@ -1,0 +1,188 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.08);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.navLinks a {
+  font-size: 1rem;
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: #2563eb;
+}
+
+/* Cart Count */
+.cartCount {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+
+/* Auth Buttons (Desktop) */
+.authButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.loginBtn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.signupBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.loginBtn:hover,
+.signupBtn:hover {
+  background: #cbd5e1;
+}
+
+/* Active Login */
+.activeBtn {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+
+.fixedSignup {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* Hamburger Menu Icon */
+.menuToggle {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -150px; 
+  width: 150px;
+  background: #ffffff;
+  box-shadow: -3px 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1.2rem;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.sidebarOpen {
+  right: 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: #2563eb;
+}
+
+/* Sidebar Auth Buttons */
+.sidebarAuth {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.sidebarAuth a {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 768px) {
+  .navLinks,
+  .authButtons {
+    display: none; 
+  }
+
+  .sidebar a{
+    text-align: center;
+  }
+
+  .menuToggle {
+    display: block;
+    font-size: 1.6rem;
+    color: #0f172a;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .menuToggle:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+
+  .logo a {
+    font-size: 1rem;
+  }
+
+  .sidebar a,
+  .sidebarAuth a {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}
+
+
+

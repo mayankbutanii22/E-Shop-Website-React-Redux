@@ -1,0 +1,368 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: #f8faff;
+  margin-top: 70px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #0055ff, #3a89ff);
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-shadow: 2px 0 15px rgba(0, 85, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li {
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+
+.active {
+  background: rgba(255, 255, 255, 0.2);
+} 
+
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 40px;
+  background: #f9fbff;
+  overflow-y: auto;
+}
+
+/* Dashboard Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 85, 255, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 85, 255, 0.15);
+}
+
+.card h3 {
+  color: #0055ff;
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Tables Section */
+.tableSection {
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 4px 18px rgba(0, 85, 255, 0.08);
+  margin-bottom: 40px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Add / Update Buttons */
+.addBtn,
+.updateBtn {
+  background: linear-gradient(90deg, #0055ff, #4da1ff);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.updateBtn {
+  background: linear-gradient(90deg, #00b35a, #00e676);
+}
+
+.addBtn:hover,
+.updateBtn:hover {
+  opacity: 0.9;
+}
+
+/* Form Styling */
+.formBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.formBox input,
+.formBox textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7e2;
+  font-size: 0.95rem;
+  transition: border 0.3s;
+}
+
+.formBox input:focus,
+.formBox textarea:focus {
+  outline: none;
+  border-color: #0055ff;
+}
+
+.formBox textarea {
+  grid-column: span 2;
+  resize: none;
+  min-height: 60px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.table th {
+  color: #002366;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Product Image */
+.thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Buttons */
+.editBtn,
+.deleteBtn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.editBtn {
+  background: #eaf2ff;
+  color: #0055ff;
+}
+
+.deleteBtn {
+  background: #ffeaea;
+  color: #ff3a3a;
+}
+
+.deleteBtn:hover {
+  background: #ffcccc;
+}
+
+
+
+/* --- Tablet Responsive (≤768px) --- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .logo { 
+    font-size: 1.3rem;
+    margin-top: 10px;
+   }
+
+  .navList {
+    display: flex;
+    gap: 15px;
+  }
+
+  .main { padding: 20px; }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  .card h3 { font-size: 1.5rem; }
+
+ 
+  .formBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+    width: 100%;
+  }
+
+  .formBox input,
+  .formBox textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formBox textarea {
+    grid-column: span 2; 
+  }
+
+
+  .tableSection { padding: 20px; }
+
+  .table th,
+  .table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .addBtn,
+  .updateBtn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    margin: 2px;
+    font-size: 0.8rem;
+  }
+}
+
+/* --- Mobile Responsive (≤480px) --- */
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .navList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .main { padding: 15px; }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card h3 { font-size: 1.3rem; }
+
+
+  .formBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .formBox input,
+  .formBox textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formBox textarea {
+    grid-column: span 1; 
+  }
+
+ 
+  .tableSection { padding: 15px; }
+
+  .table th,
+  .table td {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .addBtn,
+  .updateBtn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    margin: 2px;
+    font-size: 0.75rem;
+  }
+}
+
+
+
+
+

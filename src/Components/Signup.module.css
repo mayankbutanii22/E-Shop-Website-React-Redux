@@ -1,0 +1,157 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin-top: 60px;
+  background: linear-gradient(135deg, #fdf6fb, #fbd9f9);
+  font-family: 'Inter', sans-serif;
+}
+
+.authCard {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #6b7280;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.form input:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+  outline: none;
+}
+
+.primaryBtn {
+  width: 100%;
+  padding: 12px 0;
+  background: #ec4899;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.primaryBtn:hover {
+  background: #db2777;
+}
+
+.loginText {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.loginText a {
+  color: #ec4899;
+  text-decoration: none;
+}
+
+
+
+/* --- Tablet Responsive (≤768px) --- */
+
+@media (max-width: 768px) {
+  .authContainer {
+    height: 80vh;
+    margin-top: 60px;
+    padding: 20px;
+  }
+
+  .authCard {
+    padding: 30px;
+    max-width: 400px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+
+  .form input {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .primaryBtn {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .loginText {
+    font-size: 13px;
+  }
+}
+
+/* --- Mobile Responsive (≤480px) --- */
+
+@media (max-width: 480px) {
+  .authContainer {
+    height: 80vh;
+    margin-top: 60px;
+    padding: 15px;
+  }
+
+  .authCard {
+    padding: 25px;
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .form input {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .primaryBtn {
+    padding: 9px 0;
+    font-size: 14px;
+  }
+
+  .loginText {
+    font-size: 12px;
+  }
+}
+
+

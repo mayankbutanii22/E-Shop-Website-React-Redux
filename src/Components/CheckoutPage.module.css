@@ -1,0 +1,149 @@
+.container {
+  max-width: 600px;
+  margin: 80px auto 50px auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form label {
+  font-weight: 500;
+}
+
+.form input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #3b82f6;
+  outline: none;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  background-color: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.payment, .success {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.payment button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.success button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  background-color: #10b981;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* --- Tablet Responsive (≤768px) --- */
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 70px auto 40px auto;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .form input {
+    padding: 8px;
+  }
+
+  .summary {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .summary button {
+    width: 100%;
+    padding: 10px 14px;
+  }
+
+  .payment button,
+  .success button {
+    width: 100%;
+    padding: 10px 14px;
+  }
+}
+
+/* --- Mobile Responsive (≤480px) --- */
+@media (max-width: 480px) {
+  .container {
+    max-width: 95%;
+    margin: 60px auto 30px auto;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .form input {
+    padding: 7px;
+    font-size: 0.9rem;
+  }
+
+  .summary {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .summary button {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  .payment button,
+  .success button {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}
+
